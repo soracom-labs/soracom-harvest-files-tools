@@ -4,7 +4,9 @@ import re
 import requests
 import logging
 
-API = "https://api.soracom.io/v1"
+API_JP = "https://api.soracom.io/v1"
+API_G = "https://g.api.soracom.io/v1"
+API = ""
 
 def post_json(url, body_dict):
     return requests.post(
@@ -91,8 +93,16 @@ def auth(auth_key_id, auth_key):
     return post_json(API + "/auth", params).json()
 
 def main(args):
+    global API
     if args.debug:
         logging.basicConfig(level=logging.DEBUG)
+    if args.coverage == "jp":
+        API = API_JP
+    elif args.coverage == "g":
+        API = API_G
+    else:
+        logging.error("Unkown coverage: " + args.coverage)
+        return
     
     logging.debug(args)
     token = auth(args.auth_key_id, args.auth_key)
@@ -116,6 +126,7 @@ if __name__ == "__main__":
     parser.add_argument("--limit_num_to_list_per_req", type=int, default=100)
     parser.add_argument("--limit_size_to_files", type=int, default=default_limit_size_to_files)
     parser.add_argument("--last_evaluated_key", type=str, default=None)
+    parser.add_argument("--coverage", type=str, default="jp")
     parser.add_argument("--delete", action="store_true")
     parser.add_argument("--debug", action="store_true")
     
