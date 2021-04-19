@@ -25,18 +25,18 @@ SORACOM Harvest Filesから複数のファイルをダウンロードするサ�
 3. 次のコマンドで実行します `python3 soracom_harvest_files_downloader.py --auth_key_id [AUTH_KEY_ID] --auth_key [AUTH_KEY_SECRET] --base_path "./"`
 
 ### Parameter
---auth_key_id: 認証キー ID  
---auth_key: 認証キー シークレット  
---base_path: ファイルの取得元のパス
---save_path: (optional default="./") ファイルの保存先  
---search: (optional default=None) ファイル名の検索文字列  
---limit_num_to_list": (optional default=100) 取得するファイル数  
---limit_num_to_list_per_req: (optional default=100) 1回のLIST Requestで取得するファイル数  
---limit_size_to_files: (optional default=2.5GB) 取得する最大合計ファイルサイズ ※1  
---last_evaluated_key: (optional default=None) 最後のファイルエントリの filePath 。このパラメータを指定することで次のファイルエントリ以降を取得できる  
---coverage: (optional default="jp") 処理対象のカバレッジタイプ  
---delete: (optional default=false) 指定された場合、ファイルを取得後にSORACOM Harvest Filesから削除する  
---debug: (optional defailt=false) 指定された場合、デバッグログを出力する  
+`--auth_key_id`: 認証キー ID  
+`--auth_key`: 認証キー シークレット  
+`--base_path`: ファイルの取得元のパス
+`--save_path`: (optional default="./") ファイルの保存先  
+`--search`: (optional default=None) ファイル名の検索文字列  
+`--limit_num_to_list`: (optional default=100) 取得するファイル数  
+`--limit_num_to_list_per_req`: (optional default=100) 1回のLIST Requestで取得するファイル数  
+`--limit_size_to_files`: (optional default=2.5GB) 取得する最大合計ファイルサイズ ※1  
+`--last_evaluated_key`: (optional default=None) 最後のファイルエントリの filePath 。このパラメータを指定することで次のファイルエントリ以降を取得できる  
+`--coverage`: (optional default="jp") 処理対象のカバレッジタイプ  
+`--delete`: (optional default=false) 指定された場合、ファイルを取得後にSORACOM Harvest Filesから削除する  
+`--debug`: (optional defailt=false) 指定された場合、デバッグログを出力する  
 
 ### Note
 - `--delete` を付与することでダウンロードしたファイルをHarvest Filesから削除します。ただし、ダウンロードしたファイルの正常チェックは行っていないため、もしファイルが正しくダウンロード出来ていなかった場合はファイルを失う可能性があります
