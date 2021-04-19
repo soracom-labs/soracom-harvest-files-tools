@@ -33,8 +33,8 @@ SORACOM Harvest Filesから複数のファイルをダウンロードするサ�
 `--search`: (optional default=None) ファイル名の検索文字列  
 `--limit_num_to_list`: (optional default=100) 取得するファイル数  
 `--limit_num_to_list_per_req`: (optional default=100) 1回のLIST Requestで取得するファイル数  
-`--limit_size_to_files`: (optional default=2.5GB) 取得する最大合計ファイルサイズ ※1  
-`--last_evaluated_key`: (optional default=None) 最後のファイルエントリの filePath 。このパラメータを指定することで次のファイルエントリ以降を取得できる  
+`--limit_size_to_files`: (optional default=2.5GB) 取得する最大合計ファイルサイズ  
+`--last_evaluated_key`: (optional default=None) 最後のファイルエントリの`filePath`。このパラメータを指定することで次のファイルエントリ以降を取得できる  
 `--coverage`: (optional default="jp") 処理対象のカバレッジタイプ  
 `--delete`: (optional default=false) 指定された場合、ファイルを取得後にSORACOM Harvest Filesから削除する  
 `--debug`: (optional defailt=false) 指定された場合、デバッグログを出力する  
