@@ -27,7 +27,7 @@ SORACOM Harvest Filesから複数のファイルをダウンロードするサ�
 ### Parameter
 `--auth_key_id`: 認証キー ID  
 `--auth_key`: 認証キー シークレット  
-`--base_path`: ファイルの取得元のパス
+`--base_path`: ファイルの取得元のパス  
 `--save_path`: (optional default="./") ファイルの保存先  
 `--search`: (optional default=None) ファイル名の検索文字列  
 `--limit_num_to_list`: (optional default=100) 取得するファイル数  
