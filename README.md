@@ -28,7 +28,7 @@ SORACOM Harvest Files から複数のファイルをダウンロードするサ�
 
 2. スクリプトを任意のディレクトリに配置します
 3. 次のコマンドで実行します  
-   `python3 soracom_harvest_files_downloader.py --auth_key_id [AUTH_KEY_ID] --auth_key [AUTH_KEY_SECRET] --base_path "./"`
+   `python3 soracom_harvest_files_downloader.py --auth_key_id [AUTH_KEY_ID] --auth_key [AUTH_KEY_SECRET] --base_path "/"`
 
 ### Parameter
 
